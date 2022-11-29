@@ -7,9 +7,13 @@ yesterbowl/
 # ignore redirects
 portal.html
 
-#ignore folders
+# ignore folders
 videos/
 links/
 img/
 fonts/
 ext/
+
+# ignore configuration files
+.DS_Store
+.htaccess
