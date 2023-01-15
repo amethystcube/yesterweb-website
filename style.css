@@ -11,6 +11,7 @@ navigation
 scrollbar
 all pages
 radio
+homepage
 == responsive styles
 == utility classes
 == global styles
@@ -181,9 +182,14 @@ summary {
 
 /* buttons section on homepage */
 .buttons {
+  padding: 0;
   margin-right: 20px;
   margin-top: 40px;
   max-width: 70%;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25em;
 }
 
 /* headbar */
@@ -204,9 +210,7 @@ summary {
 }
 
 /* navigation */
-nav {
-  font-weight: bold;
-  /* width: 370px; */
+body .flex > header {
   max-width: 300px;
   margin-left: 0px;
   padding-top: 30px;
@@ -290,6 +294,26 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 30px;
   right: 0;
+}
+
+/* homepage */
+section[aria-labelledby="whats-new"] article:first-of-type {
+  border: 1px solid var(--purple);
+  padding: 0.625em;
+}
+
+section[aria-labelledby="whats-new"] article:not(:first-of-type) {
+  display: none;
+}
+
+section[aria-labelledby="whats-new"] article h3 {
+  margin: 0;
+}
+
+.gbook {
+  padding: 10px;
+  border: 1px solid var(--purple);
+  margin: 10px;
 }
 
 /* == responsive styles */
