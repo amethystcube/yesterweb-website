@@ -1,186 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:url" content="https://yesterweb.org/community/" />
-    <meta property="og:image" content="https://yesterweb.org/img/og/community-ss.png" />
-    <meta property="twitter:card" content="summary_large_image">
+    <meta
+      property="og:image"
+      content="https://yesterweb.org/img/og/community-ss.png"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
     <title>Community</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="icon" href="/img/laptop.gif" type="image/gif" />
-    <script data-goatcounter="https://yesterweb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</head>
+    <script
+      data-goatcounter="https://yesterweb.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+    <style>
+      .community-item h2 a {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1em;
+        align-items: end;
+      }
+    </style>
+  </head>
 
-<body>
-
+  <body>
     <div class="headbar">
-        <div class="logo">
-            <a href="/"><img src="/img/logo.svg" alt="Yesterweb logo"></a>
-        </div>
+      <div class="logo">
+        <a href="/"><img src="/img/logo.svg" alt="Yesterweb logo" /></a>
+      </div>
     </div>
 
     <div class="flex">
+      <header>
         <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/community/">Community</a></li>
-                <li><a href="/zine/">Zine</a></li>
-                <li><a href="/webring/">Webring</a></li>
-                <li><a href="/radio/">Radio</a></li>
-                <li><a href="/manifesto/">Manifesto</a></li>
-                <li><a href="/graphics/pubmats.html">Pubmats</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/sitemap.html">Sitemap</a></li>
-            </ul>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="https://zine.yesterweb.org">Zine</a></li>
+            <li><a href="/webring/">Webring</a></li>
+            <li><a href="/radio/">Radio</a></li>
+            <li><a href="/manifesto/">Manifesto</a></li>
+            <li><a href="/graphics/pubmats.html">Pubmats</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/sitemap.html">Sitemap</a></li>
+          </ul>
         </nav>
-
-        <main>
-            <div class="content">
-                <header>
-                    <h1>The Yesterweb Community</h1>
-                </header>
-                <p><strong>Here are some places you can participate in the Yesterweb community:</strong></p>
-                <div class="box">
-                    <div class="row">
-                        <div class="item">
-                            <div>
-                                <a href="https://discord.gg/XeumYztaFU" target="_blank">
-                                    <p>Discord <br> <img src="https://yesterweb.org/img/buttons/DISCORD-BUTTON.png"></p>
-                                </a>
-                            </div>
-                            <div>
-                                <p>An internet-focused chat server with topic channels. <br><a href="/p/why-discord.html">Why Discord?</a></p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <a href="https://forum.yesterweb.org" target="_blank">
-                                    <p>Forum<br><img src="/img/buttons/forum.png"></p>
-                                </a>
-                            </div>
-                            <div>
-                                <p>An old-school-style forum for longer discussions.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <a href="https://social.yesterweb.org/">
-                                    <p>Fediverse<br>
-                                        <img src="https://yesterweb.org/img/buttons/mastodon.png">
-                                    </p>
-                                </a>
-
-                            </div>
-                            <div>
-                                <p>A Mastodon instance on the fediverse (it's similar to Twitter)</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <a href="cafe/index.html">
-                                    <p>Yesterweb Cafe & City<br><img src="https://yesterweb.org/img/buttons/cafe.png">
-                                    </p>
-                                </a>
-                            </div>
-
-                            <div>
-                                <p>A 3D space for Yesterpunks created by with Mozilla Hubs.</p>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div>
-                                <a href="/radio">
-                                    <p>Radio<br>
-                                        <img src="https://yesterweb.org/img/buttons/radio-button.png">
-                                    </p>
-                                </a>
-                            </div>
-                            <div>
-                                <p>A radio that plays independent music and user-submitted talkshows.</p>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div>
-                                <a href="/zine">
-                                    <p>Zine<br>
-                                        <img src="https://yesterweb.org/img/buttons/zinebutton.png">
-                                    </p>
-                                </a>
-                            </div>
-                            <div>
-                                <p>A digital zine made up of user-submissions.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <a href="https://links.yesterweb.org" target="_blank">
-                                    <p>Link Directory<br>
-                                        <img src="https://yesterweb.org/img/buttons/yesterlinks-button.png">
-                                    </p>
-                                </a>
-                            </div>
-                            <div>
-                                <p>A moderated & tagged directory of user-submitted links to fun and interesting websites.</p>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div>
-                                <a href="/community/gemini/">
-                                    <p>gemini://<br>
-                                    </p>
-                                </a>
-                            </div>
-                            <div>
-                                <p>A server on the gemini:// protocol that offers the ability to make your own page. A special browser is required to view our page at: gemini://cities.yesterweb.org.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <a href="#">
-                                    <p>Minecraft Server<br></p>
-                                </a>
-                            </div>
-                            <div>
-                                <p>
-                                    A Minecraft server running v1.17.1 vanilla. Join in your Minecraft client at <strong>minecraft.yesterweb.org</strong></p>
-                            </div>
-                        </div>
-
-                    </div>
-        </main>
-
+      </header>
+      <main>
+        <div class="content">
+          <header>
+            <h1>The Yesterweb Community</h1>
+          </header>
+          <p>
+            <b
+              >Here are some places you can participate in the Yesterweb
+              community!</b
+            >
+          </p>
+          <div>
+            <article class="community-item">
+              <h2>
+                <a href="https://discord.gg/XeumYztaFU">
+                  <span>Discord</span>
+                  <img
+                    src="https://yesterweb.org/img/buttons/DISCORD-BUTTON.png"
+                    alt=""
+                  />
+                </a>
+              </h2>
+              <p>
+                An internet-focused chat server with topic channels.
+                <a href="/p/why-discord.html">Why Discord?</a>
+              </p>
+            </article>
+            <article class="community-item">
+              <h2>
+                <a href="https://forum.yesterweb.org">
+                  <span>Forum</span>
+                  <img src="/img/buttons/forum.png" />
+                </a>
+              </h2>
+              <p>An old-school-style forum for longer discussions.</p>
+            </article>
+            <article class="community-item">
+              <h2>
+                <a href="https://social.yesterweb.org">
+                  <span>Mastodon (Fediverse)</span>
+                  <img src="/img/buttons/mastodon.png" />
+                </a>
+              </h2>
+              <p>
+                A Mastodon instance on the fediverse (it's similar to Twitter)
+              </p>
+            </article>
+            <article class="community-item">
+              <h2>
+                <a href="./cafe">
+                  <span>Yesterweb Cafe & City</span>
+                  <img src="/img/buttons/cafe.png" />
+                </a>
+              </h2>
+              <p>A 3D space for Yesterpunks created by with Mozilla Hubs.</p>
+            </article>
+            <article class="community-item">
+              <h2>
+                <a href="./radio">
+                  <span>Radio</span>
+                  <img src="/img/buttons/radio-button.png" />
+                </a>
+              </h2>
+              <p>
+                A radio that plays independent music and user-submitted
+                talkshows.
+              </p>
+            </article>
+            <article class="community-item">
+              <h2>
+                <a href="https://zine.yesterweb.org">
+                  <span>Zine</span>
+                  <img src="/img/buttons/zinebutton.png" />
+                </a>
+              </h2>
+              <p>A digital zine made up of user-submissions.</p>
+            </article>
+            <article class="community-item">
+              <h2>
+                <a href="https://links.yesterweb.org">
+                  <span>Link Directory</span>
+                  <img src="/img/buttons/yesterlinks-button.png" />
+                </a>
+              </h2>
+              <p>
+                A moderated & tagged directory of user-submitted links to fun
+                and interesting websites.
+              </p>
+            </article>
+            <article class="community-item">
+              <h2>
+                <a href="./gemini">
+                  <span>Yestercities Gemini Capsules</span>
+                </a>
+              </h2>
+              <p>
+                A server on the <code>gemini://</code> protocol that offers the
+                ability to make your own page. A special browser is required to
+                view our page at <code>gemini://cities.yesterweb.org</code>. You
+                can also use our <a href="/gemini.html">Gemini proxy</a> to view
+                pages in your regular browser.
+              </p>
+            </article>
+            <article class="community-item">
+              <h2>Minecraft Server</h2>
+              <p>
+                A Minecraft server running v1.17.1 vanilla. Join in your
+                Minecraft client at <code>minecraft.yesterweb.org</code>
+              </p>
+            </article>
+          </div>
+        </div>
+      </main>
     </div>
-
-    <style>
-        .row>.item {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .item>div:first-child {
-            min-width: 20%;
-        }
-
-        .item>div:last-child {
-            max-width: 75%;
-        }
-
-        .item p {
-            margin: 10px;
-            margin-top: 5px;
-        }
-
-        .row p>img {
-            display: inline-block;
-            padding-top: 5px;
-        }
-    </style>
-
-</body>
-
+  </body>
 </html>

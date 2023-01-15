@@ -180,6 +180,19 @@ summary {
   display: none;
 }
 
+dt {
+  margin-block-start: 1em;
+  font-weight: bold;
+  line-height: inherit;
+}
+dd > p:first-of-type {
+  margin-block-start: 0;
+}
+
+dd + dd {
+  margin-block-start: 0.5em;
+}
+
 /* buttons section on homepage */
 .buttons {
   padding: 0;
@@ -189,7 +202,7 @@ summary {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  gap: .25em;
+  gap: 0.25em;
 }
 
 /* headbar */
@@ -318,7 +331,6 @@ section[aria-labelledby="whats-new"] article h3 {
 
 /* == responsive styles */
 @media only screen and (max-width: 981px) {
-
   /* == utility classes */
   .flex {
     flex-wrap: wrap;
@@ -371,15 +383,15 @@ section[aria-labelledby="whats-new"] article h3 {
     max-width: 100%;
     width: 100%;
   }
-  
+
   nav ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
   }
-  
-    nav a {
-      padding-left: 20px;
-    }
+
+  nav a {
+    padding-left: 20px;
+  }
 }
