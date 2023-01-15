@@ -1,87 +1,110 @@
 <!DOCTYPE html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Members - The Yesterweb Ring</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="icon" href="/img/laptop.gif" type="image/gif" />
     <script data-goatcounter="https://yesterweb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</head>
+    <style>
+      #webring-member-list {
+        padding: 0;
+        list-style: none;
+      }
+      #num-sites {
+        color: var(--pink);
+        font-weight: bold;
+      }
 
-<body>
+      .webring-member {
+        margin-block-end: 1em;
+      }
+
+      .webring-member > span {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="headbar">
-        <div class="logo">
-            <a href="/"><img src="/img/logo.svg" alt="Yesterweb logo"></a>
-        </div>
+      <div class="logo">
+        <a href="/"><img src="/img/logo.svg" alt="Yesterweb logo" /></a>
+      </div>
     </div>
     <div class="flex">
-        <nav>
-            <div class="navbar">
-                <div class="title">Navigation</div>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/community/">Community</a></li>
-                    <li><a href="/zine/">Zine</a></li>
-                    <li><a href="/webring/">Webring</a></li>
-                    <li><a href="/radio/">Radio</a></li>
-                    <li><a href="/manifesto/">Manifesto</a></li>
-                    <li><a href="/graphics/pubmats.html">Pubmats</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/sitemap.html">Sitemap</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container">
-            <main>
-                <div class="content">
+      <nav>
+        <div class="navbar">
+          <div class="title">Navigation</div>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="/zine/">Zine</a></li>
+            <li><a href="/webring/">Webring</a></li>
+            <li><a href="/radio/">Radio</a></li>
+            <li><a href="/manifesto/">Manifesto</a></li>
+            <li><a href="/graphics/pubmats.html">Pubmats</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <main class="content">
+          <h1>Yesterweb Ring Members</h1>
+          <p><a href="/webring/">Webring</a> || <a href="/webring/surf.html">Surf</a></p>
+          <p>
+            There are currently <span id="num-sites">-</span> sites in the ring.
+          </p>
+          <p>Members are displayed newest to oldest.</p>
+          <ul id="webring-member-list"></ul>
+        </main>
+      </div>
+    </div>
+    <script>
+      fetch("https://webring.yesterweb.org/webring.json")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          appendData(data);
+        })
+        .catch(function (err) {
+          console.error(err);
+        });
 
-                    <div class="window">
+      function appendData(data) {
+          var webringTemplate = document.getElementById("webring-member-html");
+          var memberList = document.getElementById("webring-member-list");
+          var numSitesSpan = document.getElementById("num-sites");
+          var numSites = data.length;
 
-                        <div class="padding">
-                            <h1>Yesterweb Ring Members</h1>
-                            <a href="/webring/">Webring</a> || <a href="/webring/surf.html">Surf</a><br><br>
-                            <p>There are currently <strong style="color:var(--pink)"><span id="numberSites"></span></strong> sites in the ring.</p>
-                            <p>Members are displayed newest to oldest.</p>
-                            <div id="myData"></div>
+        numSitesSpan.innerHTML = numSites;
+        for (var i = numSites - 1; i >= 0; i--) {
+            // retrieve template html
+            var webringMember = webringTemplate.content.cloneNode(true);
 
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <style>
-                #myData {
-                    display: flex;
-                    flex-direction: column-reverse;
-                }
-            </style>
-            <script>
-                fetch('https://webring.yesterweb.org/webring.json')
-
-                    .then(function(response) {
-                        return response.json();
-                    })
-                    .then(function(data) {
-                        appendData(data);
-                    })
-                    .catch(function(err) {
-                        console.log('error: ' + err);
-                    });
-
-                function appendData(data) {
-                    var mainContainer = document.getElementById("myData");
-                    var numberSitesSpan = document.getElementById("numberSites");
-                    var numberSites = data.length;
-                    numberSitesSpan.innerHTML = numberSites;
-                    for (var i = 0; i < data.length; i++) {
-                        var div = document.createElement("div");
-                        div.innerHTML = '<strong>Name:</strong> ' + data[i].name + '<br/>' + '<strong>URL: </strong>' + '<a href="' + data[i].url + '">' + data[i].url + '</a>' + '<br/>' + '<strong>Owner:</strong> ' + data[i].owner + '<br/><br/>';
-                        mainContainer.appendChild(div);
-                        div.classList.add("item");
-                    }
-                }
-            </script>
-            <noscript>Please enable JavaScript to view the member list.</noscript>
-</BODY>
-
+            // set name and owner
+            webringMember.querySelector(".webring-name").textContent = data[i].name;
+            webringMember.querySelector(".webring-owner").textContent = data[i].owner;
+            
+            // set url
+            webringMember.querySelector(".webring-url").textContent = data[i].url;
+            webringMember.querySelector(".webring-url").href = data[i].url;
+            
+            // add to page
+            memberList.appendChild(webringMember);
+        }
+      }
+    </script>
+    <noscript>Please enable JavaScript to view the member list.</noscript>
+    <template id="webring-member-html">
+        <li class="webring-member">
+            <span><strong>Name:</strong> <span class="webring-name"></span></span>
+            <span><strong>URL:</strong> <a href="https://example.org" class="webring-url">https://example.org</a></span>
+            <span><strong>Owner:</strong> <span class="webring-owner"></span></span>
+        </li>
+    </template>
+  </body>
 </html>
