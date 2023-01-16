@@ -8,6 +8,114 @@
     <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="icon" href="/img/laptop.gif" type="image/gif" />
     <script data-goatcounter="https://yesterweb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <style>
+        html {
+            --section-spacing: 4.7rem;
+            scroll-padding-block-start: var(--section-spacing);
+        }
+
+        .content ul li {
+            line-height: 1.3em;
+        }
+
+        .red {
+            color: #ff7c7c;
+            padding: 5px;
+        }
+
+        .green {
+            color: #6dff7c;
+            padding: 5px;
+        }
+
+        .padding li {
+            padding: 10px;
+        }
+
+        .padding ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        .no,
+        .yes {
+            margin: 0;
+            padding: 0;
+            padding-left: 20px;
+        }
+
+        .no li,
+        .yes li {
+            list-style: none;
+            padding: 5px;
+        }
+
+        .no li::before {
+            content: "❌";
+            padding-right: 10px;
+        }
+
+        .yes li::before {
+            content: "✅";
+            padding-right: 10px;
+        }
+
+        ul>ul {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        ol>li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        ol>ul>li {
+            padding: 5px;
+        }
+
+        h2 {
+            color: var(--bluish) !important;
+        }
+
+        section {
+            margin-block-start: var(--section-spacing);
+        }
+
+        section:first-of-type {
+            margin-block-start: 0;
+        }
+
+        .obj>li {
+            color: var(--pink);
+            font-weight: bold;
+        }
+
+        .subnav {
+            position: sticky;
+            top: 0px;
+            background-color: black;
+            padding: 10px;
+            padding-left: 0;
+        }
+
+        .subnav ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .subnav ul li {
+            display: inline-block;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        @media only screen and (max-width: 450px) {
+            section {
+                margin-block-start: 5.3rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -47,28 +155,21 @@
                     </ul>
                 </div>
 
-                <section id="about" class="first">
+                <section aria-labelledby="about">
                     <header>
-                        <h2>Who are we?</h2>
+                        <h2 id="about">About</h2>
                     </header>
 
                     <p> The Yesterweb is made up of people who've come together in recognition that something is wrong with the internet, a space that changed before our eyes.</p>
-
                     <p>We're people. Not a corporation or a "brand". We've watched regular people become second-class citizens on the web, demoted to 'users' by the biggest platforms. We are those people.</p>
-
-
                     <p>People like us are encouraged to be hostile with each other on those platforms because it keeps us engaged. This creates huge divides between us - the regular people - at the platform's benefit.</p>
-
                     <p>We realize that others on the internet are human, like us. Flawed, with complicated histories and harmful beliefs learned from their environment. Behind every username is a real person with their own unique perspective and experiences.</p>
-
                     <p>We don't tolerate blatant hate speech (sexism, racism, homophobia, transphobia, chauvinism, and national/religious discrimination). However, we acknowledge that we've all held questionable beliefs at some point in our lives, but then our perspectives changed. We engage with the good faith notion that others perspectives can change, too.</p>
-
                     <p>Some of us have a special nostalgia for old-web aesthetics, but our purpose runs deeper than this. The renewed interest in these trends also signify a need for change.</p>
-
                     <p> We want to figure out how to forge a path forward, toward cultivating a better internet.</p>
                 </section>
-                <section id="objectives">
-                    <h2>Objectives / Mission</h2>
+                <section aria-labelledby="objectives">
+                    <h2 id="objectives">Objectives / Mission</h2>
                     <p>These objectives change, grow and develop with the community.</p>
                     <ol class="obj">
                         <li>To advocate for a no (or low) cost self-expressive and creative hobby (building websites).</li>
@@ -78,8 +179,8 @@
 
 
                 </section>
-                <section id="rules">
-                    <h2>Rules</h2>
+                <section aria-labelledby="rules">
+                    <h2 id="rules">Rules</h2>
                     <p>These rules apply to all Yesterweb "named" spaces.</p>
                     <ol>
                         <li>Respect all users, regardless of your liking towards them. Treat others the way you want to be treated.</li>
@@ -91,9 +192,9 @@
                         <li>No commercial advertising.</li>
                 </section>
 
-                <section id="etiquette">
+                <section aria-labelledby="etiquette">
                     <header>
-                        <h2>Etiquette</h2>
+                        <h2 id="etiquette">Etiquette</h2>
                     </header>
 
                     <p>These are a list of guidelines for 'etiquette' or behavior in Yesterweb spaces. If you think these sound reasonable, it wouldn't hurt to follow them in other spaces online as well.</p>
@@ -168,8 +269,8 @@
 
 
                 </section>
-                <section id="history">
-                    <h2>History</h2>
+                <section aria-labelledby="history">
+                    <h2 id="history">History</h2>
                     <p>The Yesterweb began as an empty Discord server in <strong>February of 2021</strong> and was created by <a href="https://sadgrl.online" target="_blank">Sadness</a>. The server was intended to be a communication tool for the community at Neocities.org, a a place for likeminded folks to discuss building websites.</p>
                     <p>As we continued to grow, we attracted a diverse group of people with a range of knowledge, skills and hobbies who all care deeply about the internet. We have <a href="/manifesto/">seen it shift and become what it is today</a>. We're starting small, by researching and sharing, making art, creating digital spaces, and figuring out how to unlearn harmful social habits from social media. </p>
                     <p>We hope to inspire people to create their own spaces online.</p>
@@ -177,131 +278,18 @@
                     <p>We are always <a href="https://zine.yesterweb.org/issue-03/index.php?page=1/">changing and growing</a>.</p>
                     <p>You can drop by our Discord or reach out to us at <a href="mailto:contact@yesterweb.org">contact@yesterweb.org</a></p>
                 </section>
-                <section id="FAQ">
-                    <h2>Frequently Asked Questions</h2>
-                    <details>
-                        <summary>What role does nostalgia play in the Yesterweb?</summary>
-                        <p>It's fun to be nostalgic about old design choices and aesthetics. There’s a lot of comfort in nostalgia, but’s more of an 'icing' than a 'cake'. We aren't blind to the shortcomings of the early web, instead we see the potential that was lost. And sometimes we just want to dress up our websites!</p>
-                    </details>
-
-                    <details>
-                        <summary>Why are you using Discord? Discord is terrible.</summary>
+                <section aria-labelledby="FAQ">
+                    <h2 id="FAQ">Frequently Asked Questions</h2>
+                    <h3>What role does nostalgia play in the Yesterweb?</h3>
+                        <p>It's fun to be nostalgic about old design choices and aesthetics. There's a lot of comfort in nostalgia, but it's more of an 'icing' than a 'cake'. We aren't blind to the shortcomings of the early web, instead we see the potential that was lost. And sometimes we just want to dress up our websites!</p>
+                        <h3>Why are you using Discord? Discord is terrible.</h3>
                         <p>Yes, <a href="/p/why-discord.html">we know</a>, but we choose Discord over the alternatives because that's where the most people are.</p>
-                    </details>
-                    <details>
-                        <summary>Have you considered bridging the Discord server with [Matrix/IRC/XMPP]?</summary>
+                        <h3>Have you considered bridging the Discord server with [Matrix/IRC/XMPP]?</h3>
                         <p>Yes, we have tried a bridge before and it didn't work out. We aren't looking at alternatives currently.</p>
-                    </details>
                 </section>
             </div>
 
         </main>
     </div>
-    <style>
-        .content ul li {
-            line-height: 1.3em;
-        }
-
-        .red {
-            color: #ff7c7c;
-            padding: 5px;
-        }
-
-        .green {
-            color: #6dff7c;
-            padding: 5px;
-        }
-
-        .padding li {
-            padding: 10px;
-        }
-
-        .padding ol {
-            margin: 0;
-            padding: 0;
-        }
-
-        .no,
-        .yes {
-            margin: 0;
-            padding: 0;
-            padding-left: 20px;
-        }
-
-        .no li,
-        .yes li {
-            list-style: none;
-            padding: 5px;
-        }
-
-        .no li::before {
-            content: "❌";
-            padding-right: 10px;
-        }
-
-        .yes li::before {
-            content: "✅";
-            padding-right: 10px;
-        }
-
-        ul>ul {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        ol>li {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        ol>ul>li {
-            padding: 5px;
-        }
-
-        h2 {
-            color: var(--bluish) !important;
-        }
-
-        section {
-            margin-top: 40px;
-            padding-top: 40px;
-        }
-
-        section:first-of-type {
-            margin-top: 0;
-            padding-top: 0;
-        }
-
-        .obj>li {
-            color: var(--pink);
-            font-weight: bold;
-        }
-
-        .subnav {
-            position: sticky;
-            top: 0px;
-            background-color: black;
-            padding: 10px;
-            padding-left: 0;
-        }
-
-        .subnav ul {
-            margin: 0;
-            padding: 0;
-        }
-
-        .subnav ul li {
-            display: inline-block;
-            margin-left: 0;
-            padding-left: 0;
-        }
-
-        @media only screen and (max-width: 450px) {
-            section {
-                padding-top: 90px;
-            }
-        }
-    </style>
 </body>
-
 </html>

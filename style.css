@@ -131,11 +131,33 @@ summary {
   color: var(--green);
 }
 
+button {
+  padding: .25em .5em;
+  border: 0.0625em solid currentColor;
+  background-color: var(--bg-color);
+  color: white;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+button:focus {
+  outline: 0.25em solid var(--pink);
+}
+
+button:active {
+  background-color: #cccccc;
+  color: black;
+}
+
 /* global styles */
 .content {
   max-width: 950px;
   /* background-color: var(--bg-color); */
-  color: white;
   padding: 80px;
   padding-top: 20px;
   position: relative;
@@ -170,6 +192,10 @@ summary {
   color: white;
   padding: 10px;
   width: 75%;
+}
+
+.notice a {
+  color: white;
 }
 
 .title {
@@ -224,7 +250,7 @@ dd + dd {
 
 /* navigation */
 body .flex > header {
-  max-width: 300px;
+  min-width: 17rem;
   margin-left: 0px;
   padding-top: 30px;
   padding-left: 30px;
@@ -377,11 +403,11 @@ section[aria-labelledby="whats-new"] article h3 {
   }
 
   /* == navigation */
-  nav {
-    padding-bottom: 30px;
-    padding-left: 0px;
+  body .flex > header {
     max-width: 100%;
-    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0;
   }
 
   nav ul {
