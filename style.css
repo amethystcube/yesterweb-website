@@ -95,6 +95,7 @@ main {
   background-color: black;
   height: 100%;
   min-height: calc(100vh - 110px);
+  flex: 1 1 100%;
 }
 
 a {
@@ -132,7 +133,7 @@ summary {
 }
 
 button {
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   border: 0.0625em solid currentColor;
   background-color: var(--bg-color);
   color: white;
@@ -250,16 +251,20 @@ dd + dd {
 
 /* navigation */
 body .flex > header {
-  min-width: 17rem;
   margin-left: 0px;
-  padding-top: 30px;
-  padding-left: 30px;
+  padding-block: 30px;
+  padding-inline-start: 30px;
   background-color: var(--nav-bg);
   background-image: url("/img/sidebar.png");
   background-repeat: repeat-y;
   background-size: 20%;
   background-position: top right;
-  flex-grow: 1;
+  flex: 1 0 17rem;
+}
+
+header nav {
+  position: sticky;
+  inset-block-start: 1rem;
 }
 
 nav ul {
@@ -404,10 +409,7 @@ section[aria-labelledby="whats-new"] article h3 {
 
   /* == navigation */
   body .flex > header {
-    max-width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 0;
+    padding-inline-start: 0;
   }
 
   nav ul {
